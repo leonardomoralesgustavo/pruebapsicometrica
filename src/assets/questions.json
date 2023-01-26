@@ -1,0 +1,160 @@
+{
+    "questions": [{
+            "questionText": "¿Con cuál te identificas más?",
+            "options": [
+                {
+                    "text": "PERSUASIVO",
+                    "value": "MI"
+                },
+                {
+                    "text": "GENTIL",
+                    "value": "MS"
+                },
+                {
+                    "text": "HUMILDE",
+                    "value": "MC"
+                },
+                {
+                    "text": "ORIGINAL"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas menos?",
+            "options": [
+                {
+                    "text": "PERSUASIVO"
+                },
+                {
+                    "text": "GENTIL",
+                    "value": "LS"
+                },
+                {
+                    "text": "HUMILDE",
+                    "value": "LC"
+                },
+                {
+                    "text": "ORIGINAL",
+                    "value": "LD"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas más?",
+            "options": [
+                {
+                    "text": "AGRESIVO",
+                    "value": "MD"
+                },
+                {
+                    "text": "ALMA DE LA FIESTA",
+                    "value": "MI"
+                },
+                {
+                    "text": "COMODINO",
+                    "value": "MS"
+                },
+                {
+                    "text": "TEMEROSO"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas menos?",
+            "options": [
+                {
+                    "text": "AGRESIVO"
+                    
+                },
+                {
+                    "text": "ALMA DE LA FIESTA",
+                    "value": "LI"
+                },
+                {
+                    "text": "COMODINO",
+                    "value": "LS"
+
+                },
+                {
+                    "text": "TEMEROSO",
+                    "value": "LC"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas más?",
+            "options": [
+                {
+                    "text": "AGRADABLE"
+                },
+                {
+                    "text": "TEMEROSO DE DIOS",
+                    "value": "MC"
+                },
+                {
+                    "text": "TENAZ",
+                    "value": "MD"
+                },
+                {
+                    "text": "ATRACTIVO",
+                    "value": "MI"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas menos?",
+            "options": [
+                {
+                    "text": "AGRADABLE",
+                    "value": "LS"
+                },
+                {
+                    "text": "TEMEROSO DE DIOS",
+                    "value": "LC"
+                },
+                {
+                    "text": "TENAZ",
+                    "value": "LD"
+                },
+                {
+                    "text": "ATRACTIVO",
+                    "value": "LI"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas más?",
+            "options": [
+                {
+                    "text": "CAUTELOSO"
+                },
+                {
+                    "text": "DETERMINADO"
+                },
+                {
+                    "text": "CONVINCENTE"
+                },
+                {
+                    "text": "BONACHON"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas menos?",
+            "options": [
+                {
+                    "text": "CAUTELOSO"
+                },
+                {
+                    "text": "DETERMINADO"
+                },
+                {
+                    "text": "CONVINCENTE"
+                },
+                {
+                    "text": "BONACHON"
+                }
+            ]
+        }
+    ]
+}
