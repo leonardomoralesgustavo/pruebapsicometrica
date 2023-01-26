@@ -137,13 +137,13 @@
         id="chart"
         [dataSource]="grossProductData"
         [stickyHovering]="false"
-        title="Resultados"
+        title="Motivación"
       >
-        <dxi-series valueField="year2004" name="2004"></dxi-series>
+        <dxi-series valueField="D" name="D"></dxi-series>
         <dxi-series valueField="year2001" name="2001"></dxi-series>
         <dxi-series valueField="year1998" name="1998"></dxi-series>
         <dxo-common-series-settings
-          argumentField="state"
+          argumentField="letter"
           type="spline"
           hoverMode="includePoints"
         >

@@ -4,19 +4,23 @@
             "options": [
                 {
                     "text": "PERSUASIVO",
-                    "value": "MI"
+                    "type": "Motivacional",
+                    "value": "I"
                 },
                 {
                     "text": "GENTIL",
-                    "value": "MS"
+                    "type": "Motivacional",
+                    "value": "S"
                 },
                 {
                     "text": "HUMILDE",
-                    "value": "MC"
+                    "type": "Motivacional",
+                    "value": "C"
                 },
                 {
                     "text": "ORIGINAL",
-                    "value": ""
+                    "type": "Motivacional",
+                    "value": "X"
                 }
             ]
         },
@@ -25,19 +29,23 @@
             "options": [
                 {
                     "text": "PERSUASIVO",
-                    "value": ""
+                    "type": "Low",
+                    "value": "X"
                 },
                 {
                     "text": "GENTIL",
-                    "value": "LS"
+                    "type": "Low",
+                    "value": "S"
                 },
                 {
                     "text": "HUMILDE",
-                    "value": "LC"
+                    "type": "Low",
+                    "value": "C"
                 },
                 {
                     "text": "ORIGINAL",
-                    "value": "LD"
+                    "type": "Low",
+                    "value": "D"
                 }
             ]
         },
@@ -46,19 +54,23 @@
             "options": [
                 {
                     "text": "AGRESIVO",
-                    "value": "MD"
+                    "type": "Motivacional",
+                    "value": "D"
                 },
                 {
                     "text": "ALMA DE LA FIESTA",
-                    "value": "MI"
+                    "type": "Motivacional",
+                    "value": "I"
                 },
                 {
                     "text": "COMODINO",
-                    "value": "MS"
+                    "type": "Motivacional",
+                    "value": "S"
                 },
                 {
                     "text": "TEMEROSO",
-                    "value": ""
+                    "type": "Motivacional",
+                    "value": "X"
                 }
             ]
         },
@@ -67,20 +79,24 @@
             "options": [
                 {
                     "text": "AGRESIVO",
-                    "value": ""
+                    "type": "Low",
+                    "value": "X"
                 },
                 {
                     "text": "ALMA DE LA FIESTA",
-                    "value": "LI"
+                    "type": "Low",
+                    "value": "I"
                 },
                 {
                     "text": "COMODINO",
-                    "value": "LS"
+                    "type": "Low",
+                    "value": "S"
 
                 },
                 {
                     "text": "TEMEROSO",
-                    "value": "LC"
+                    "type": "Low",
+                    "value": "C"
                 }
             ]
         },
@@ -89,19 +105,23 @@
             "options": [
                 {
                     "text": "AGRADABLE",
-                    "value": ""
+                    "type": "Motivacional",
+                    "value": "X"
                 },
                 {
                     "text": "TEMEROSO DE DIOS",
-                    "value": "MC"
+                    "type": "Motivacional",
+                    "value": "C"
                 },
                 {
                     "text": "TENAZ",
-                    "value": "MD"
+                    "type": "Motivacional",
+                    "value": "D"
                 },
                 {
                     "text": "ATRACTIVO",
-                    "value": "MI"
+                    "type": "Motivacional",
+                    "value": "I"
                 }
             ]
         },
@@ -110,19 +130,23 @@
             "options": [
                 {
                     "text": "AGRADABLE",
-                    "value": "LS"
+                    "type": "Low",
+                    "value": "S"
                 },
                 {
                     "text": "TEMEROSO DE DIOS",
-                    "value": "LC"
+                    "type": "Low",
+                    "value": "C"
                 },
                 {
                     "text": "TENAZ",
-                    "value": "LD"
+                    "type": "Low",
+                    "value": "D"
                 },
                 {
                     "text": "ATRACTIVO",
-                    "value": "LI"
+                    "type": "Low",
+                    "value": "I"
                 }
             ]
         },
@@ -131,19 +155,23 @@
             "options": [
                 {
                     "text": "CAUTELOSO",
-                    "value": "MC"
+                    "type": "Motivacional",
+                    "value": "C"
                 },
                 {
                     "text": "DETERMINADO",
-                    "value": "MD"
+                    "type": "Motivacional",
+                    "value": "D"
                 },
                 {
                     "text": "CONVINCENTE",
-                    "value": "MI"
+                    "type": "Motivacional",
+                    "value": "I"
                 },
                 {
                     "text": "BONACHON",
-                    "value": "MS"
+                    "type": "Motivacional",
+                    "value": "S"
                 }
             ]
         },
@@ -152,19 +180,23 @@
             "options": [
                 {
                     "text": "CAUTELOSO",
-                    "value": "LC"
+                    "type": "Low",
+                    "value": "C"
                 },
                 {
                     "text": "DETERMINADO",
-                    "value": ""
+                    "type": "Low",
+                    "value": "X"
                 },
                 {
                     "text": "CONVINCENTE",
-                    "value": "LI"
+                    "type": "Low",
+                    "value": "I"
                 },
                 {
                     "text": "BONACHON",
-                    "value": ""
+                    "type": "Low",
+                    "value": "X"
                 }
             ]
         }

@@ -2,21 +2,33 @@ import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { QuestionService } from '../service/question.service';
 import { DxChartModule } from 'devextreme-angular';
-import { Service, GrossProduct } from '../service/prueba.service';
+import { GrossProduct } from '../service/prueba.service';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss'],
-  providers: [Service],
+  // providers: [Service],
 })
 export class QuestionComponent implements OnInit {
-  grossProductData: GrossProduct[] = [];
+  // grossProductData: GrossProduct[] = [];
+
+  grossProductData: GrossProduct[] = [
+    {
+      letter: 'D',
+      D: 5,
+      I: 374,
+      S: 427,
+      C: 479,
+    },
+  ];
 
   public name: string = '';
   public questionList: any = [];
   public resultados: any = [];
   public values: any = [];
+  public valuesM: any = [];
+  public valuesL: any = [];
   public currentQuestion: number = 0;
   public currentPosition: number = 0;
   public points: number = 0;
@@ -33,8 +45,8 @@ export class QuestionComponent implements OnInit {
 
   auxValue: number = 0;
 
-  constructor(private questionService: QuestionService, service: Service) {
-    this.grossProductData = service.getGrossProductData();
+  constructor(private questionService: QuestionService) {
+    // this.grossProductData;
   }
 
   ngOnInit(): void {
@@ -113,8 +125,34 @@ export class QuestionComponent implements OnInit {
     console.log(index);
     this.auxValue = index;
     console.log(
-      'Value :' + this.questionList[this.currentPosition].options[index].value
+      'Value: ' + this.questionList[this.currentPosition].options[index].value
     );
+
+    let text = this.questionList[this.currentPosition].options[index].value;
+    let result = text.includes('M');
+
+    if (result == true) {
+      this.valuesM.push(
+        this.questionList[this.currentPosition].options[index].value
+      );
+    } else {
+      this.valuesL.push(
+        this.questionList[this.currentPosition].options[index].value
+      );
+    }
+    // console.log(result);
+    console.log(this.valuesM);
+    console.log(this.valuesL);
+
+    // this.values.push(
+    //   this.questionList[this.currentPosition].options[index].value
+    // );
+    console.log('Arreglo de values: ' + this.values);
+    let countObj = this.values.reduce(
+      (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
+      {}
+    );
+    console.log(countObj);
     this.disabledButtons.push(index);
 
     // if (this.resultados.includes(temp)) {
