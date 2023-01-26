@@ -15,7 +15,8 @@
                     "value": "MC"
                 },
                 {
-                    "text": "ORIGINAL"
+                    "text": "ORIGINAL",
+                    "value": ""
                 }
             ]
         },
@@ -23,7 +24,8 @@
             "questionText": "¿Con cuál te identificas menos?",
             "options": [
                 {
-                    "text": "PERSUASIVO"
+                    "text": "PERSUASIVO",
+                    "value": ""
                 },
                 {
                     "text": "GENTIL",
@@ -55,7 +57,8 @@
                     "value": "MS"
                 },
                 {
-                    "text": "TEMEROSO"
+                    "text": "TEMEROSO",
+                    "value": ""
                 }
             ]
         },
@@ -63,8 +66,8 @@
             "questionText": "¿Con cuál te identificas menos?",
             "options": [
                 {
-                    "text": "AGRESIVO"
-                    
+                    "text": "AGRESIVO",
+                    "value": ""
                 },
                 {
                     "text": "ALMA DE LA FIESTA",
@@ -85,7 +88,8 @@
             "questionText": "¿Con cuál te identificas más?",
             "options": [
                 {
-                    "text": "AGRADABLE"
+                    "text": "AGRADABLE",
+                    "value": ""
                 },
                 {
                     "text": "TEMEROSO DE DIOS",
@@ -126,16 +130,20 @@
             "questionText": "¿Con cuál te identificas más?",
             "options": [
                 {
-                    "text": "CAUTELOSO"
+                    "text": "CAUTELOSO",
+                    "value": "MC"
                 },
                 {
-                    "text": "DETERMINADO"
+                    "text": "DETERMINADO",
+                    "value": "MD"
                 },
                 {
-                    "text": "CONVINCENTE"
+                    "text": "CONVINCENTE",
+                    "value": "MI"
                 },
                 {
-                    "text": "BONACHON"
+                    "text": "BONACHON",
+                    "value": "MS"
                 }
             ]
         },
@@ -143,16 +151,20 @@
             "questionText": "¿Con cuál te identificas menos?",
             "options": [
                 {
-                    "text": "CAUTELOSO"
+                    "text": "CAUTELOSO",
+                    "value": "LC"
                 },
                 {
-                    "text": "DETERMINADO"
+                    "text": "DETERMINADO",
+                    "value": ""
                 },
                 {
-                    "text": "CONVINCENTE"
+                    "text": "CONVINCENTE",
+                    "value": "LI"
                 },
                 {
-                    "text": "BONACHON"
+                    "text": "BONACHON",
+                    "value": ""
                 }
             ]
         }

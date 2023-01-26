@@ -16,6 +16,7 @@ export class QuestionComponent implements OnInit {
   public name: string = '';
   public questionList: any = [];
   public resultados: any = [];
+  public values: any = [];
   public currentQuestion: number = 0;
   public currentPosition: number = 0;
   public points: number = 0;
@@ -29,6 +30,8 @@ export class QuestionComponent implements OnInit {
   isQuizCompleted: boolean = false;
   selectedValue = '';
   disabledButtons: any = [];
+
+  auxValue: number = 0;
 
   constructor(private questionService: QuestionService, service: Service) {
     this.grossProductData = service.getGrossProductData();
@@ -71,7 +74,7 @@ export class QuestionComponent implements OnInit {
     // this.disabledButtons.push(this.resultados.indexOf(this.temp));
     // const temp = this.selectedValue;
     console.log('Array de resultados: ' + this.resultados);
-    console.log(this.questionList[this.currentPosition].options);
+    // console.log(this.questionList[this.currentPosition].options[this.currentPosition].value);
 
     // console.log('Array constante');
     // console.log(
@@ -92,7 +95,7 @@ export class QuestionComponent implements OnInit {
 
     console.log(lastElement);
 
-    let index;
+    let index: any;
     for (
       let idx = 0;
       idx < this.questionList[this.currentPosition].options.length;
@@ -108,6 +111,10 @@ export class QuestionComponent implements OnInit {
     }
 
     console.log(index);
+    this.auxValue = index;
+    console.log(
+      'Value :' + this.questionList[this.currentPosition].options[index].value
+    );
     this.disabledButtons.push(index);
 
     // if (this.resultados.includes(temp)) {
@@ -129,7 +136,7 @@ export class QuestionComponent implements OnInit {
 
     console.log(this.questionList.length);
 
-    if(this.currentQuestion == this.questionList.length){
+    if (this.currentQuestion == this.questionList.length) {
       this.isQuizCompleted = true;
     }
 
