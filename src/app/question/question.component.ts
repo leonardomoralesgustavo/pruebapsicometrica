@@ -120,10 +120,17 @@ export class QuestionComponent implements OnInit {
 
     this.selectedValue = '';
     this.currentQuestion++;
+    console.log(this.currentQuestion);
     this.currentPosition++;
 
     if (this.currentPosition % 2 == 0) {
       this.disabledButtons = [];
+    }
+
+    console.log(this.questionList.length);
+
+    if(this.currentQuestion == this.questionList.length){
+      this.isQuizCompleted = true;
     }
 
     // this.resetCounter();
