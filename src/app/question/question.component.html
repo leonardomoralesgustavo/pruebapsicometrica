@@ -135,13 +135,14 @@
     <ng-container *ngIf="isQuizCompleted">
       <dx-chart
         id="chart"
-        [dataSource]="grossProductData"
+        [dataSource]="finalM"
         [stickyHovering]="false"
         title="Motivación"
       >
-        <dxi-series valueField="D" name="D"></dxi-series>
-        <dxi-series valueField="year2001" name="2001"></dxi-series>
-        <dxi-series valueField="year1998" name="1998"></dxi-series>
+        <dxi-series valueField="value" name="Status"></dxi-series>
+        <!-- <dxi-series valueField="I" name="I"></dxi-series>
+        <dxi-series valueField="S" name="S"></dxi-series>
+        <dxi-series valueField="C" name="C"></dxi-series> -->
         <dxo-common-series-settings
           argumentField="letter"
           type="spline"

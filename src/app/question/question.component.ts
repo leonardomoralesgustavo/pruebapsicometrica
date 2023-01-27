@@ -16,10 +16,19 @@ export class QuestionComponent implements OnInit {
   grossProductData: GrossProduct[] = [
     {
       letter: 'D',
-      D: 5,
-      I: 374,
-      S: 427,
-      C: 479,
+      value: 1,
+    },
+    {
+      letter: 'I',
+      value: 55,
+    },
+    {
+      letter: 'S',
+      value: 15,
+    },
+    {
+      letter: 'C',
+      value: 91,
     },
   ];
 
@@ -44,6 +53,8 @@ export class QuestionComponent implements OnInit {
   disabledButtons: any = [];
 
   auxValue: number = 0;
+
+  public finalM: any = [];
 
   constructor(private questionService: QuestionService) {
     // this.grossProductData;
@@ -131,9 +142,13 @@ export class QuestionComponent implements OnInit {
     let text = this.questionList[this.currentPosition].options[index].value;
     let result = text.includes('M');
 
-    if (result == true) {
+    if (
+      this.questionList[this.currentPosition].options[index].type ==
+      'Motivacional'
+    ) {
       this.valuesM.push(
         this.questionList[this.currentPosition].options[index].value
+        // this.valuesM.id=5
       );
     } else {
       this.valuesL.push(
@@ -148,11 +163,42 @@ export class QuestionComponent implements OnInit {
     //   this.questionList[this.currentPosition].options[index].value
     // );
     console.log('Arreglo de values: ' + this.values);
-    let countObj = this.values.reduce(
+
+    // let countObj = this.values.reduce(
+    //   (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
+    //   {}
+    // );
+    // console.log(countObj);
+
+    let countObjM = this.valuesM.reduce(
       (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
       {}
     );
-    console.log(countObj);
+    console.log(countObjM);
+
+    const keys = Object.keys(countObjM);
+
+    const finalResults = keys.map((key) => ({
+      letter: key,
+      value: countObjM[key],
+    }));
+
+    this.finalM = finalResults;
+    
+    console.log('Final results: ', finalResults);
+    delete this.finalM['X']
+    // let resultS = Object.entries(countObjM).map(([k, v]) => ({ [k]: v }));
+
+    // console.log(resultS);
+
+    // this.finalM = resultS;
+
+    let countObjL = this.valuesL.reduce(
+      (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
+      {}
+    );
+    console.log(countObjL);
+
     this.disabledButtons.push(index);
 
     // if (this.resultados.includes(temp)) {
@@ -178,8 +224,16 @@ export class QuestionComponent implements OnInit {
       this.isQuizCompleted = true;
     }
 
+    if (this.currentQuestion == 7) {
+      console.log('7');
+    }
+
     // this.resetCounter();
     // this.getProgressPercent();
+  }
+
+  convertArray() {
+    const keys = Object.keys;
   }
 
   previousQuestion() {
