@@ -1,37 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { QuestionService } from '../service/question.service';
-import { DxChartModule } from 'devextreme-angular';
-import { GrossProduct } from '../service/prueba.service';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss'],
-  // providers: [Service],
 })
 export class QuestionComponent implements OnInit {
-  // grossProductData: GrossProduct[] = [];
-
-  grossProductData: GrossProduct[] = [
-    {
-      letter: 'D',
-      value: 1,
-    },
-    {
-      letter: 'I',
-      value: 55,
-    },
-    {
-      letter: 'S',
-      value: 15,
-    },
-    {
-      letter: 'C',
-      value: 91,
-    },
-  ];
-
   public name: string = '';
   public questionList: any = [];
   public resultados: any = [];
@@ -55,10 +31,9 @@ export class QuestionComponent implements OnInit {
   auxValue: number = 0;
 
   public finalM: any = [];
+  public finalL: any = [];
 
-  constructor(private questionService: QuestionService) {
-    // this.grossProductData;
-  }
+  constructor(private questionService: QuestionService) {}
 
   ngOnInit(): void {
     this.name = localStorage.getItem('name')!;
@@ -94,25 +69,7 @@ export class QuestionComponent implements OnInit {
 
     console.log('Temporal: ' + this.temp);
     console.log('Posición del temporal:' + this.resultados.indexOf(this.temp));
-    // this.disabledButtons.push(this.resultados.indexOf(this.temp));
-    // const temp = this.selectedValue;
     console.log('Array de resultados: ' + this.resultados);
-    // console.log(this.questionList[this.currentPosition].options[this.currentPosition].value);
-
-    // console.log('Array constante');
-    // console.log(
-    //   this.questionList[this.currentPosition].options.indexOf('ORIGINAL')
-    // );
-
-    //  console.log(this,this.resultados.slice(-1)[0] );
-
-    // console.log(
-    //   'Tamaño de arreglo botones disable: ' + this.disabledButtons.length
-    // );
-    // if (this.disabledButtons.length === 1) {
-    //   this.disabledButtons = [];
-    //   console.log('Hay un dato');
-    // }
 
     let lastElement = this.resultados[this.resultados.length - 1];
 
@@ -140,7 +97,6 @@ export class QuestionComponent implements OnInit {
     );
 
     let text = this.questionList[this.currentPosition].options[index].value;
-    let result = text.includes('M');
 
     if (
       this.questionList[this.currentPosition].options[index].type ==
@@ -148,66 +104,45 @@ export class QuestionComponent implements OnInit {
     ) {
       this.valuesM.push(
         this.questionList[this.currentPosition].options[index].value
-        // this.valuesM.id=5
       );
     } else {
       this.valuesL.push(
         this.questionList[this.currentPosition].options[index].value
       );
     }
-    // console.log(result);
-    console.log(this.valuesM);
-    console.log(this.valuesL);
 
-    // this.values.push(
-    //   this.questionList[this.currentPosition].options[index].value
-    // );
+    console.log(this.valuesM);
+    while (this.valuesM.indexOf('X') !== -1) {
+      this.valuesM.splice(this.valuesM.indexOf('X'), 1);
+    }
+    console.log('Elimnando la X en Motivacional: ', this.valuesM);
+    console.log(this.valuesL);
+    while (this.valuesL.indexOf('X') !== -1) {
+      this.valuesL.splice(this.valuesL.indexOf('X'), 1);
+    }
+    console.log('Elimnando la X en Low: ', this.valuesL);
     console.log('Arreglo de values: ' + this.values);
 
-    // let countObj = this.values.reduce(
-    //   (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
-    //   {}
-    // );
-    // console.log(countObj);
+    // iteracion de array Motivacional
+    //Aquí va el código que se agregué en la función al detectar el fin de las preguntas de Motivacional
+    // iteracion de array Motivacional
 
-    let countObjM = this.valuesM.reduce(
-      (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
-      {}
-    );
-    console.log(countObjM);
+    // iteracion de arra Low
 
-    const keys = Object.keys(countObjM);
+    // iteracion de arra Low
 
-    const finalResults = keys.map((key) => ({
-      letter: key,
-      value: countObjM[key],
-    }));
-
-    this.finalM = finalResults;
-    
-    console.log('Final results: ', finalResults);
-    delete this.finalM['X']
-    // let resultS = Object.entries(countObjM).map(([k, v]) => ({ [k]: v }));
-
-    // console.log(resultS);
-
-    // this.finalM = resultS;
-
-    let countObjL = this.valuesL.reduce(
-      (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
-      {}
-    );
-    console.log(countObjL);
-
-    this.disabledButtons.push(index);
-
-    // if (this.resultados.includes(temp)) {
-    //   console.log('true');
-    // } else {
-    //   console.log('false');
+    // orde disc
+    // function move(from: any, to: any, arr: any) {
+    //   const newArr = [...arr];
+    //   const item = newArr.splice(from, 1)[0];
+    //   newArr.splice(to, 0, item);
+    //   return newArr;
     // }
 
-    // this.disabledButtons = [];
+    // console.log(move(3, 1, this.finalM));
+    // order disc
+
+    this.disabledButtons.push(index);
 
     this.selectedValue = '';
     this.currentQuestion++;
@@ -222,10 +157,68 @@ export class QuestionComponent implements OnInit {
 
     if (this.currentQuestion == this.questionList.length) {
       this.isQuizCompleted = true;
-    }
 
-    if (this.currentQuestion == 7) {
-      console.log('7');
+      let countObjM = this.valuesM.reduce(
+        (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
+        {}
+      );
+      console.log(countObjM);
+
+      //agregar aqu]i ceros
+      ['D', 'I', 'S', 'C'].forEach((element) => {
+        if (!(element in countObjM)) countObjM[element] = 0;
+      });
+
+      const keysM = Object.keys(countObjM);
+      const finalResultsM = keysM.map((key) => ({
+        letter: key,
+        value: countObjM[key],
+        index:
+          key === 'D'
+            ? 0
+            : key === 'I'
+            ? 1
+            : key === 'S'
+            ? 2
+            : key === 'C' && 3,
+      }));
+
+      this.finalM = finalResultsM;
+      console.log('Final resultsM: ', finalResultsM);
+      this.finalM.sort((a: any, b: any) => a.index - b.index);
+      console.log('Ordenado Motivacional ', this.finalM);
+
+      let countObjL = this.valuesL.reduce(
+        (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
+        {}
+      );
+      console.log(countObjL);
+      //Agregar aqui la acción de
+      ['D', 'I', 'S', 'C'].forEach((element) => {
+        if (!(element in countObjL)) countObjL[element] = 0;
+      });
+
+      const keysL = Object.keys(countObjL);
+      const finalResultsL = keysL.map((key) => ({
+        letter: key,
+        value: countObjL[key],
+        index:
+          key === 'D'
+            ? 0
+            : key === 'I'
+            ? 1
+            : key === 'S'
+            ? 2
+            : key === 'C' && 3,
+      }));
+
+      this.finalL = finalResultsL;
+      console.log('Final resultsL: ', finalResultsL);
+      this.finalL.sort((a: any, b: any) => a.index - b.index);
+      console.log('Ordenado Low ', this.finalL);
+
+      console.log(countObjM);
+      console.log(countObjL);
     }
 
     // this.resetCounter();
