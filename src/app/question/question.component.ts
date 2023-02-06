@@ -10,6 +10,7 @@ import { QuestionService } from '../service/question.service';
 export class QuestionComponent implements OnInit {
   public name: string = '';
   public questionList: any = [];
+  public resultsM: any = [];
   public resultados: any = [];
   public values: any = [];
   public valuesM: any = [];
@@ -60,6 +61,10 @@ export class QuestionComponent implements OnInit {
   getAllQuestions() {
     this.questionService.getQuestionJson().subscribe((res) => {
       this.questionList = res.questions;
+    });
+
+    this.questionService.getResultsDM().subscribe((res) => {
+      this.resultsM = res.results;
     });
   }
 
@@ -187,6 +192,59 @@ export class QuestionComponent implements OnInit {
       console.log('Final resultsM: ', finalResultsM);
       this.finalM.sort((a: any, b: any) => a.index - b.index);
       console.log('Ordenado Motivacional ', this.finalM);
+
+      // pruebas finales en el array M
+
+      // console.log(this.resultsM);
+
+      const foundD = this.resultsM.find((obj: any) => {
+        return obj.result === this.finalM[0].value;
+      });
+      console.log(foundD.value);
+
+      const foundI = this.resultsM.find((obj: any) => {
+        return obj.result === this.finalM[1].value;
+      });
+      console.log(foundI);
+
+      const foundS = this.resultsM.find((obj: any) => {
+        return obj.result === this.finalM[2].value;
+      });
+      console.log(foundS);
+
+      const foundC = this.resultsM.find((obj: any) => {
+        return obj.result === this.finalM[3].value;
+      });
+      console.log(foundC);
+
+      const keysMNew = Object.keys(countObjM);
+      const finalResultsMNew = keysM.map((key) => ({
+        letter: key,
+        value:
+          key === 'D'
+            ? foundD.value
+            : key === 'I'
+            ? foundI.value
+            : key === 'S'
+            ? foundS.value
+            : key === 'C' && foundC.value,
+        index:
+          key === 'D'
+            ? 0
+            : key === 'I'
+            ? 1
+            : key === 'S'
+            ? 2
+            : key === 'C' && 3,
+      }));
+      console.log(finalResultsMNew);
+
+      console.log(this.finalM[0].value);
+      console.log(this.finalM[1].value);
+      console.log(this.finalM[2].value);
+      console.log(this.finalM[3].value);
+
+      // pruebas finales en el array M
 
       let countObjL = this.valuesL.reduce(
         (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),

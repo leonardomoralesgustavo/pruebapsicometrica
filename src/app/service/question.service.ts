@@ -10,4 +10,8 @@ export class QuestionService {
   getQuestionJson(){
     return this.http.get<any>("assets/questions.json");
   }
+
+  getResultsDM(){
+    return this.http.get<any>("assets/dm.json");
+  }
 }
