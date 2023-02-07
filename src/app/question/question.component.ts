@@ -10,7 +10,14 @@ import { QuestionService } from '../service/question.service';
 export class QuestionComponent implements OnInit {
   public name: string = '';
   public questionList: any = [];
-  public resultsM: any = [];
+  public resultsDM: any = [];
+  public resultsIM: any = [];
+  public resultsSM: any = [];
+  public resultsCM: any = [];
+  public resultsDL: any = [];
+  public resultsIL: any = [];
+  public resultsSL: any = [];
+  public resultsCL: any = [];
   public resultados: any = [];
   public values: any = [];
   public valuesM: any = [];
@@ -33,6 +40,9 @@ export class QuestionComponent implements OnInit {
 
   public finalM: any = [];
   public finalL: any = [];
+
+  public finalMReOrder: any = [];
+  public finalLReOrder: any = [];
 
   constructor(private questionService: QuestionService) {}
 
@@ -63,8 +73,38 @@ export class QuestionComponent implements OnInit {
       this.questionList = res.questions;
     });
 
+    // results motivacional
     this.questionService.getResultsDM().subscribe((res) => {
-      this.resultsM = res.results;
+      this.resultsDM = res.results;
+    });
+
+    this.questionService.getResultsIM().subscribe((res) => {
+      this.resultsIM = res.results;
+    });
+
+    this.questionService.getResultsSM().subscribe((res) => {
+      this.resultsSM = res.results;
+    });
+
+    this.questionService.getResultsCM().subscribe((res) => {
+      this.resultsCM = res.results;
+    });
+
+    // results low
+    this.questionService.getResultsDL().subscribe((res) => {
+      this.resultsDL = res.results;
+    });
+
+    this.questionService.getResultsIL().subscribe((res) => {
+      this.resultsIL = res.results;
+    });
+
+    this.questionService.getResultsSL().subscribe((res) => {
+      this.resultsSL = res.results;
+    });
+
+    this.questionService.getResultsCL().subscribe((res) => {
+      this.resultsCL = res.results;
     });
   }
 
@@ -169,7 +209,7 @@ export class QuestionComponent implements OnInit {
       );
       console.log(countObjM);
 
-      //agregar aqu]i ceros
+      //agregar aquí ceros
       ['D', 'I', 'S', 'C'].forEach((element) => {
         if (!(element in countObjM)) countObjM[element] = 0;
       });
@@ -195,39 +235,33 @@ export class QuestionComponent implements OnInit {
 
       // pruebas finales en el array M
 
-      // console.log(this.resultsM);
-
-      const foundD = this.resultsM.find((obj: any) => {
+      const foundDM = this.resultsDM.find((obj: any) => {
         return obj.result === this.finalM[0].value;
       });
-      console.log(foundD.value);
 
-      const foundI = this.resultsM.find((obj: any) => {
+      const foundIM = this.resultsIM.find((obj: any) => {
         return obj.result === this.finalM[1].value;
       });
-      console.log(foundI);
 
-      const foundS = this.resultsM.find((obj: any) => {
+      const foundSM = this.resultsSM.find((obj: any) => {
         return obj.result === this.finalM[2].value;
       });
-      console.log(foundS);
 
-      const foundC = this.resultsM.find((obj: any) => {
+      const foundCM = this.resultsCM.find((obj: any) => {
         return obj.result === this.finalM[3].value;
       });
-      console.log(foundC);
 
       const keysMNew = Object.keys(countObjM);
       const finalResultsMNew = keysM.map((key) => ({
         letter: key,
         value:
           key === 'D'
-            ? foundD.value
+            ? foundDM.value
             : key === 'I'
-            ? foundI.value
+            ? foundIM.value
             : key === 'S'
-            ? foundS.value
-            : key === 'C' && foundC.value,
+            ? foundSM.value
+            : key === 'C' && foundCM.value,
         index:
           key === 'D'
             ? 0
@@ -238,11 +272,10 @@ export class QuestionComponent implements OnInit {
             : key === 'C' && 3,
       }));
       console.log(finalResultsMNew);
+      this.finalMReOrder = finalResultsMNew;
+      this.finalMReOrder.sort((a: any, b: any) => a.index - b.index);
 
-      console.log(this.finalM[0].value);
-      console.log(this.finalM[1].value);
-      console.log(this.finalM[2].value);
-      console.log(this.finalM[3].value);
+      console.log('NUevo ordenamiento en M: ', this.finalMReOrder);
 
       // pruebas finales en el array M
 
@@ -274,6 +307,52 @@ export class QuestionComponent implements OnInit {
       console.log('Final resultsL: ', finalResultsL);
       this.finalL.sort((a: any, b: any) => a.index - b.index);
       console.log('Ordenado Low ', this.finalL);
+
+      // pruebas finales low
+
+      const foundDL = this.resultsDL.find((obj: any) => {
+        return obj.result === this.finalL[0].value;
+      });
+
+      const foundIL = this.resultsIL.find((obj: any) => {
+        return obj.result === this.finalL[1].value;
+      });
+
+      const foundSL = this.resultsSL.find((obj: any) => {
+        return obj.result === this.finalL[2].value;
+      });
+
+      const foundCL = this.resultsCL.find((obj: any) => {
+        return obj.result === this.finalL[3].value;
+      });
+
+      const keysLNew = Object.keys(countObjL);
+      const finalResultsLNew = keysM.map((key) => ({
+        letter: key,
+        value:
+          key === 'D'
+            ? foundDL.value
+            : key === 'I'
+            ? foundIL.value
+            : key === 'S'
+            ? foundSL.value
+            : key === 'C' && foundCL.value,
+        index:
+          key === 'D'
+            ? 0
+            : key === 'I'
+            ? 1
+            : key === 'S'
+            ? 2
+            : key === 'C' && 3,
+      }));
+      console.log(finalResultsLNew);
+      this.finalLReOrder = finalResultsLNew;
+      this.finalLReOrder.sort((a: any, b: any) => a.index - b.index);
+
+      console.log('NUevo ordenamiento en M: ', this.finalLReOrder);
+
+      // pruebas finales low
 
       console.log(countObjM);
       console.log(countObjL);
