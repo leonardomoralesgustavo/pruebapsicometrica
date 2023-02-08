@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
 import { QuestionService } from '../service/question.service';
 
 @Component({
@@ -27,11 +26,7 @@ export class QuestionComponent implements OnInit {
   public points: number = 0;
   public temp = '';
   public elementClicked: any = '';
-  counter = 60;
   correctAnswer: number = 0;
-  inCorrectAnswer: number = 0;
-  interval$: any;
-  progress: string = '0';
   isQuizCompleted: boolean = false;
   selectedValue = '';
   disabledButtons: any = [];
@@ -49,7 +44,6 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {
     this.name = localStorage.getItem('name')!;
     this.getAllQuestions();
-    // this.startCounter();
   }
 
   callAction(action: any) {
@@ -141,8 +135,6 @@ export class QuestionComponent implements OnInit {
       'Value: ' + this.questionList[this.currentPosition].options[index].value
     );
 
-    let text = this.questionList[this.currentPosition].options[index].value;
-
     if (
       this.questionList[this.currentPosition].options[index].type ==
       'Motivacional'
@@ -167,25 +159,6 @@ export class QuestionComponent implements OnInit {
     }
     console.log('Elimnando la X en Low: ', this.valuesL);
     console.log('Arreglo de values: ' + this.values);
-
-    // iteracion de array Motivacional
-    //Aquí va el código que se agregué en la función al detectar el fin de las preguntas de Motivacional
-    // iteracion de array Motivacional
-
-    // iteracion de arra Low
-
-    // iteracion de arra Low
-
-    // orde disc
-    // function move(from: any, to: any, arr: any) {
-    //   const newArr = [...arr];
-    //   const item = newArr.splice(from, 1)[0];
-    //   newArr.splice(to, 0, item);
-    //   return newArr;
-    // }
-
-    // console.log(move(3, 1, this.finalM));
-    // order disc
 
     this.disabledButtons.push(index);
 
@@ -354,12 +327,9 @@ export class QuestionComponent implements OnInit {
 
       // pruebas finales low
 
-      console.log(countObjM);
-      console.log(countObjL);
+      // console.log(countObjM);
+      // console.log(countObjL);
     }
-
-    // this.resetCounter();
-    // this.getProgressPercent();
   }
 
   convertArray() {
@@ -393,47 +363,5 @@ export class QuestionComponent implements OnInit {
 
       this.points -= 10;
     }
-  }
-
-  startCounter() {
-    this.interval$ = interval(1000).subscribe((val) => {
-      this.counter--;
-      if (this.counter === 0) {
-        this.currentQuestion++;
-        this.counter = 60;
-        this.points -= 10;
-      }
-    });
-    setTimeout(() => {
-      this.interval$.unsubscribe();
-    }, 600000);
-  }
-
-  stopCounter() {
-    this.interval$.unsubscribe();
-    this.counter = 0;
-  }
-
-  resetCounter() {
-    this.stopCounter();
-    this.counter = 60;
-    this.startCounter();
-  }
-
-  resetQuiz() {
-    this.resetCounter();
-    this.getAllQuestions();
-    this.points = 0;
-    this.counter = 60;
-    this.currentQuestion = 0;
-    this.progress = '0';
-  }
-
-  getProgressPercent() {
-    this.progress = (
-      (this.currentQuestion / this.questionList.length) *
-      100
-    ).toString();
-    return this.progress;
   }
 }

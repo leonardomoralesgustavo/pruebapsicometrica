@@ -1,0 +1,160 @@
+{
+  "results": [
+    {
+      "result": -19,
+      "value": 1
+    },
+    {
+      "result": -18,
+      "value": 2
+    },
+    {
+      "result": -17,
+      "value": 2
+    },
+    {
+      "result": -16,
+      "value": 2
+    },
+    {
+      "result": -15,
+      "value": 2
+    },
+    {
+      "result": -14,
+      "value": 2
+    },
+    {
+      "result": -13,
+      "value": 2
+    },
+    {
+      "result": -12,
+      "value": 3
+    },
+    {
+      "result": -11,
+      "value": 4
+    },
+    {
+      "result": -10,
+      "value": 5
+    },
+    {
+      "result": -9,
+      "value": 8
+    },
+    {
+      "result": -8,
+      "value": 10
+    },
+    {
+      "result": -7,
+      "value": 15
+    },
+    {
+      "result": -6,
+      "value": 20
+    },
+    {
+      "result": -5,
+      "value": 25
+    },
+    {
+      "result": -4,
+      "value": 30
+    },
+    {
+      "result": -3,
+      "value": 35
+    },
+    {
+      "result": -2,
+      "value": 40
+    },
+    {
+      "result": -1,
+      "value": 50
+    },
+    {
+      "result": 0,
+      "value": 57
+    },
+    {
+      "result": 1,
+      "value": 60
+    },
+    {
+      "result": 2,
+      "value": 70
+    },
+    {
+      "result": 3,
+      "value": 75
+    },
+    {
+      "result": 4,
+      "value": 80
+    },
+    {
+      "result": 5,
+      "value": 84
+    },
+    {
+      "result": 6,
+      "value": 87
+    },
+    {
+      "result": 7,
+      "value": 91
+    },
+    {
+      "result": 8,
+      "value": 94
+    },
+    {
+      "result": 9,
+      "value": 96
+    },
+    {
+      "result": 10,
+      "value": 97
+    },
+    {
+      "result": 11,
+      "value": 97
+    },
+    {
+      "result": 12,
+      "value": 98
+    },
+    {
+      "result": 13,
+      "value": 98
+    },
+    {
+      "result": 14,
+      "value": 98
+    },
+    {
+      "result": 15,
+      "value": 98
+    },
+    {
+      "result": 16,
+      "value": 98
+    },
+    {
+      "result": 17,
+      "value": 98
+    },
+    {
+      "result": 18,
+      "value": 98
+    },
+    {
+      "result": 19,
+      "value": 99
+    }
+  ]
+}

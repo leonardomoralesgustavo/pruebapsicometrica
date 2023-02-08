@@ -4,7 +4,9 @@
       <div class="image">
         <img
           src="https://grandhotelier.com/wp-content/uploads/2020/08/Test-de-Cleaver-Conoce-todos-los-detalles-de-esta-prueba.jpg"
-          width="100" alt="logo" />
+          width="100"
+          alt="logo"
+        />
       </div>
       <div class="quiz-header">
         <h4 style="font-family: cursive">Cleaver Test</h4>
@@ -14,8 +16,10 @@
     <ng-container *ngIf="!isQuizCompleted">
       <div class="d-flex justify-content-around py-3">
         <div class="question-remain">
-          <span style="font-style: italic">Pregunta {{ currentQuestion + 1 }} de
-            {{ questionList.length }}</span>
+          <span style="font-style: italic"
+            >Pregunta {{ currentQuestion + 1 }} de
+            {{ questionList.length }}</span
+          >
         </div>
       </div>
       <div class="question" style="margin-bottom: 10px">
@@ -23,46 +27,93 @@
           <h3>{{ questionList[currentQuestion]?.questionText }}</h3>
         </div>
       </div>
-      <div *ngFor="
+      <div
+        *ngFor="
           let option of questionList[currentQuestion]?.options;
           let i = index
-        " style="margin-left: 5px; font-size: 25px">
-        <input style="
+        "
+        style="margin-left: 5px; font-size: 25px"
+      >
+        <input
+          style="
             font: inherit;
             color: currentColor;
             width: 0.8em;
             height: 0.8em;
-          " appChangeBg [isCorrect]="option.correct" (click)="onClick($event)"
-          (click)="answer(currentQuestion + 1, option)" [(ngModel)]="selectedValue" type="radio" [value]="option.text"
-          [disabled]="disabledButtons.indexOf(i) !== -1" />
+          "
+          appChangeBg
+          [isCorrect]="option.correct"
+          (click)="onClick($event)"
+          (click)="answer(currentQuestion + 1, option)"
+          [(ngModel)]="selectedValue"
+          type="radio"
+          [value]="option.text"
+          [disabled]="disabledButtons.indexOf(i) !== -1"
+        />
         {{ option.text }}
       </div>
       <div class="d-flex justify-content-between" style="margin-top: 10px">
-        <button [disabled]="currentQuestion === 0" class="btn" (click)="previousQuestion()">
-          <i class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true"></i>
+        <button
+          [disabled]="currentQuestion === 0"
+          class="btn"
+          (click)="previousQuestion()"
+        >
+          <i
+            class="fa text-primary fa-chevron-left fa-3x"
+            aria-hidden="true"
+          ></i>
         </button>
         <button class="btn" (click)="nextQuestion()">
-          <i class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true"></i>
+          <i
+            class="fa text-primary fa-chevron-right fa-3x"
+            aria-hidden="true"
+          ></i>
         </button>
       </div>
     </ng-container>
     <ng-container *ngIf="isQuizCompleted">
-      <dx-chart id="chart" [dataSource]="finalMReOrder" [stickyHovering]="false" title="Motivación">
+      <dx-chart
+        id="chart"
+        [dataSource]="finalMReOrder"
+        [stickyHovering]="false"
+        title="Motivación"
+      >
         <dxi-series valueField="value" name="Status"></dxi-series>
-        <dxo-common-series-settings argumentField="letter" type="spline" hoverMode="includePoints">
+        <dxo-common-series-settings
+          argumentField="letter"
+          type="spline"
+          hoverMode="includePoints"
+        >
           <dxo-point hoverMode="allArgumentPoints"></dxo-point>
         </dxo-common-series-settings>
-        <dxo-legend verticalAlignment="bottom" horizontalAlignment="center" hoverMode="excludePoints">
+        <dxo-legend
+          verticalAlignment="bottom"
+          horizontalAlignment="center"
+          hoverMode="excludePoints"
+        >
         </dxo-legend>
         <dxo-export [enabled]="true"></dxo-export>
       </dx-chart>
       <br /><br />
-      <dx-chart id="chart" [dataSource]="finalLReOrder" [stickyHovering]="false" title="Presión">
+      <dx-chart
+        id="chart"
+        [dataSource]="finalLReOrder"
+        [stickyHovering]="false"
+        title="Presión"
+      >
         <dxi-series valueField="value" name="Status" color="red"></dxi-series>
-        <dxo-common-series-settings argumentField="letter" type="spline" hoverMode="includePoints">
+        <dxo-common-series-settings
+          argumentField="letter"
+          type="spline"
+          hoverMode="includePoints"
+        >
           <dxo-point hoverMode="allArgumentPoints"></dxo-point>
         </dxo-common-series-settings>
-        <dxo-legend verticalAlignment="bottom" horizontalAlignment="center" hoverMode="excludePoints">
+        <dxo-legend
+          verticalAlignment="bottom"
+          horizontalAlignment="center"
+          hoverMode="excludePoints"
+        >
         </dxo-legend>
         <dxo-export [enabled]="true"></dxo-export>
       </dx-chart>
