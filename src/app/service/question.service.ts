@@ -45,4 +45,22 @@ export class QuestionService {
   getResultsCL() {
     return this.http.get<any>('assets/low/cl.json');
   }
+
+  // results total
+
+  getResultsDT(){
+    return this.http.get<any>('assets/general/dt.json');
+  }
+
+  getResultsIT(){
+    return this.http.get<any>('assets/general/it.json');
+  }
+
+  getResultsST(){
+    return this.http.get<any>('assets/general/st.json');
+  }
+
+  getResultsCT(){
+    return this.http.get<any>('assets/general/ct.json');
+  }
 }

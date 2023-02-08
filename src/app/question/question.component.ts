@@ -17,6 +17,10 @@ export class QuestionComponent implements OnInit {
   public resultsIL: any = [];
   public resultsSL: any = [];
   public resultsCL: any = [];
+  public resultsDT: any = [];
+  public resultsIT: any = [];
+  public resultsST: any = [];
+  public resultsCT: any = [];
   public resultados: any = [];
   public values: any = [];
   public valuesM: any = [];
@@ -38,6 +42,7 @@ export class QuestionComponent implements OnInit {
 
   public finalMReOrder: any = [];
   public finalLReOrder: any = [];
+  public graficaTotales: any = [];
 
   constructor(private questionService: QuestionService) {}
 
@@ -100,19 +105,36 @@ export class QuestionComponent implements OnInit {
     this.questionService.getResultsCL().subscribe((res) => {
       this.resultsCL = res.results;
     });
+
+    // results total
+    this.questionService.getResultsDT().subscribe((res) => {
+      this.resultsDT = res.results;
+    });
+
+    this.questionService.getResultsIT().subscribe((res) => {
+      this.resultsIT = res.results;
+    });
+
+    this.questionService.getResultsST().subscribe((res) => {
+      this.resultsST = res.results;
+    });
+
+    this.questionService.getResultsCT().subscribe((res) => {
+      this.resultsCT = res.results;
+    });
   }
 
   nextQuestion() {
     this.resultados.push(this.selectedValue);
     this.temp = this.selectedValue;
 
-    console.log('Temporal: ' + this.temp);
-    console.log('Posición del temporal:' + this.resultados.indexOf(this.temp));
-    console.log('Array de resultados: ' + this.resultados);
+    // console.log('Temporal: ' + this.temp);
+    // console.log('Posición del temporal:' + this.resultados.indexOf(this.temp));
+    // console.log('Array de resultados: ' + this.resultados);
 
     let lastElement = this.resultados[this.resultados.length - 1];
 
-    console.log(lastElement);
+    // console.log(lastElement);
 
     let index: any;
     for (
@@ -129,7 +151,7 @@ export class QuestionComponent implements OnInit {
       }
     }
 
-    console.log(index);
+    // console.log(index);
     this.auxValue = index;
     console.log(
       'Value: ' + this.questionList[this.currentPosition].options[index].value
@@ -148,30 +170,30 @@ export class QuestionComponent implements OnInit {
       );
     }
 
-    console.log(this.valuesM);
+    // console.log(this.valuesM);
     while (this.valuesM.indexOf('X') !== -1) {
       this.valuesM.splice(this.valuesM.indexOf('X'), 1);
     }
-    console.log('Elimnando la X en Motivacional: ', this.valuesM);
+    // console.log('Elimnando la X en Motivacional: ', this.valuesM);
     console.log(this.valuesL);
     while (this.valuesL.indexOf('X') !== -1) {
       this.valuesL.splice(this.valuesL.indexOf('X'), 1);
     }
-    console.log('Elimnando la X en Low: ', this.valuesL);
-    console.log('Arreglo de values: ' + this.values);
+    // console.log('Elimnando la X en Low: ', this.valuesL);
+    // console.log('Arreglo de values: ' + this.values);
 
     this.disabledButtons.push(index);
 
     this.selectedValue = '';
     this.currentQuestion++;
-    console.log(this.currentQuestion);
+    // console.log(this.currentQuestion);
     this.currentPosition++;
 
     if (this.currentPosition % 2 == 0) {
       this.disabledButtons = [];
     }
 
-    console.log(this.questionList.length);
+    // console.log(this.questionList.length);
 
     if (this.currentQuestion == this.questionList.length) {
       this.isQuizCompleted = true;
@@ -224,7 +246,6 @@ export class QuestionComponent implements OnInit {
         return obj.result === this.finalM[3].value;
       });
 
-      const keysMNew = Object.keys(countObjM);
       const finalResultsMNew = keysM.map((key) => ({
         letter: key,
         value:
@@ -248,7 +269,7 @@ export class QuestionComponent implements OnInit {
       this.finalMReOrder = finalResultsMNew;
       this.finalMReOrder.sort((a: any, b: any) => a.index - b.index);
 
-      console.log('NUevo ordenamiento en M: ', this.finalMReOrder);
+      console.log('Nuevo ordenamiento en M: ', this.finalMReOrder);
 
       // pruebas finales en el array M
 
@@ -323,12 +344,74 @@ export class QuestionComponent implements OnInit {
       this.finalLReOrder = finalResultsLNew;
       this.finalLReOrder.sort((a: any, b: any) => a.index - b.index);
 
-      console.log('NUevo ordenamiento en M: ', this.finalLReOrder);
+      console.log('NUevo ordenamiento en L: ', this.finalLReOrder);
 
-      // pruebas finales low
+      // iteración array de totales
 
-      // console.log(countObjM);
-      // console.log(countObjL);
+      const finArray = keysM.map((key) => ({
+        letter: key,
+        value: countObjM[key] - countObjL[key],
+        index:
+          key === 'D'
+            ? 0
+            : key === 'I'
+            ? 1
+            : key === 'S'
+            ? 2
+            : key === 'C' && 3,
+      }));
+      console.log(finArray);
+
+      finArray.sort((a: any, b: any) => a.index - b.index);
+
+      console.log('Ordenamiento final: ', finArray);
+
+      const foundDT = this.resultsDT.find((obj: any) => {
+        return obj.result === finArray[0].value;
+      });
+      console.log(foundDT);
+
+      const foundIT = this.resultsIT.find((obj: any) => {
+        return obj.result === finArray[1].value;
+      });
+      console.log(foundIT);
+
+      const foundST = this.resultsST.find((obj: any) => {
+        return obj.result === finArray[2].value;
+      });
+      console.log(foundST);
+
+      const foundCT = this.resultsCT.find((obj: any) => {
+        return obj.result === finArray[3].value;
+      });
+      console.log(foundCT);
+
+      const graficaTotales = keysM.map((key) => ({
+        letter: key,
+        value:
+          key === 'D'
+            ? foundDT.value
+            : key === 'I'
+            ? foundIT.value
+            : key === 'S'
+            ? foundST.value
+            : key === 'C' && foundCT.value,
+        index:
+          key === 'D'
+            ? 0
+            : key === 'I'
+            ? 1
+            : key === 'S'
+            ? 2
+            : key === 'C' && 3,
+      }));
+      console.log(graficaTotales);
+      this.graficaTotales = graficaTotales;
+      graficaTotales.sort((a: any, b: any) => a.index - b.index);
+
+      console.log('Ordenamiento gráfica totales: ', this.graficaTotales);
+
+      // iteración array de totales
     }
   }
 
