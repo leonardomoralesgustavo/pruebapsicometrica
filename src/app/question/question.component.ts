@@ -198,16 +198,18 @@ export class QuestionComponent implements OnInit {
     if (this.currentQuestion == this.questionList.length) {
       this.isQuizCompleted = true;
 
+      // iteracion de values and data en Motivacional
       let countObjM = this.valuesM.reduce(
         (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
         {}
       );
       console.log(countObjM);
 
-      //agregar aquí ceros
+      //se agregan 0 si no hay algún valor
       ['D', 'I', 'S', 'C'].forEach((element) => {
         if (!(element in countObjM)) countObjM[element] = 0;
       });
+      //se agregan 0 si no hay algún valor
 
       const keysM = Object.keys(countObjM);
       const finalResultsM = keysM.map((key) => ({
@@ -227,8 +229,6 @@ export class QuestionComponent implements OnInit {
       console.log('Final resultsM: ', finalResultsM);
       this.finalM.sort((a: any, b: any) => a.index - b.index);
       console.log('Ordenado Motivacional ', this.finalM);
-
-      // pruebas finales en el array M
 
       const foundDM = this.resultsDM.find((obj: any) => {
         return obj.result === this.finalM[0].value;
@@ -271,17 +271,21 @@ export class QuestionComponent implements OnInit {
 
       console.log('Nuevo ordenamiento en M: ', this.finalMReOrder);
 
-      // pruebas finales en el array M
+      // iteracion de values and data en Motivacional
+
+      // iteracion de values and data en Low
 
       let countObjL = this.valuesL.reduce(
         (acc: any, val: any) => ((acc[val] = acc[val] ? acc[val] + 1 : 1), acc),
         {}
       );
       console.log(countObjL);
-      //Agregar aqui la acción de
+
+      //se agregan 0 si no hay algún valor
       ['D', 'I', 'S', 'C'].forEach((element) => {
         if (!(element in countObjL)) countObjL[element] = 0;
       });
+      //se agregan 0 si no hay algún valor
 
       const keysL = Object.keys(countObjL);
       const finalResultsL = keysL.map((key) => ({
@@ -302,8 +306,6 @@ export class QuestionComponent implements OnInit {
       this.finalL.sort((a: any, b: any) => a.index - b.index);
       console.log('Ordenado Low ', this.finalL);
 
-      // pruebas finales low
-
       const foundDL = this.resultsDL.find((obj: any) => {
         return obj.result === this.finalL[0].value;
       });
@@ -320,7 +322,6 @@ export class QuestionComponent implements OnInit {
         return obj.result === this.finalL[3].value;
       });
 
-      const keysLNew = Object.keys(countObjL);
       const finalResultsLNew = keysM.map((key) => ({
         letter: key,
         value:
@@ -344,7 +345,9 @@ export class QuestionComponent implements OnInit {
       this.finalLReOrder = finalResultsLNew;
       this.finalLReOrder.sort((a: any, b: any) => a.index - b.index);
 
-      console.log('NUevo ordenamiento en L: ', this.finalLReOrder);
+      console.log('Nuevo ordenamiento en L: ', this.finalLReOrder);
+
+      // iteracion de values and data en Low
 
       // iteración array de totales
 
