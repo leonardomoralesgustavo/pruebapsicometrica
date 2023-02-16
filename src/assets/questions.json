@@ -1,304 +1,1204 @@
 {
-    "questions": [{
-            "questionText": "¿Con cuál te identificas más?",
-            "options": [
-                {
-                    "text": "PERSUASIVO",
-                    "type": "Motivacional",
-                    "value": "I"
-                },
-                {
-                    "text": "GENTIL",
-                    "type": "Motivacional",
-                    "value": "S"
-                },
-                {
-                    "text": "HUMILDE",
-                    "type": "Motivacional",
-                    "value": "C"
-                },
-                {
-                    "text": "ORIGINAL",
-                    "type": "Motivacional",
-                    "value": "X"
-                }
-            ]
+  "questions": [
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "PERSUASIVO",
+          "type": "Motivacional",
+          "value": "I"
         },
         {
-            "questionText": "¿Con cuál te identificas menos?",
-            "options": [
-                {
-                    "text": "PERSUASIVO",
-                    "type": "Low",
-                    "value": "X"
-                },
-                {
-                    "text": "GENTIL",
-                    "type": "Low",
-                    "value": "S"
-                },
-                {
-                    "text": "HUMILDE",
-                    "type": "Low",
-                    "value": "C"
-                },
-                {
-                    "text": "ORIGINAL",
-                    "type": "Low",
-                    "value": "D"
-                }
-            ]
+          "text": "GENTIL",
+          "type": "Motivacional",
+          "value": "S"
         },
         {
-            "questionText": "¿Con cuál te identificas más?",
-            "options": [
-                {
-                    "text": "AGRESIVO",
-                    "type": "Motivacional",
-                    "value": "D"
-                },
-                {
-                    "text": "ALMA DE LA FIESTA",
-                    "type": "Motivacional",
-                    "value": "I"
-                },
-                {
-                    "text": "COMODINO",
-                    "type": "Motivacional",
-                    "value": "S"
-                },
-                {
-                    "text": "TEMEROSO",
-                    "type": "Motivacional",
-                    "value": "X"
-                }
-            ]
+          "text": "HUMILDE",
+          "type": "Motivacional",
+          "value": "C"
         },
         {
-            "questionText": "¿Con cuál te identificas menos?",
-            "options": [
-                {
-                    "text": "AGRESIVO",
-                    "type": "Low",
-                    "value": "X"
-                },
-                {
-                    "text": "ALMA DE LA FIESTA",
-                    "type": "Low",
-                    "value": "I"
-                },
-                {
-                    "text": "COMODINO",
-                    "type": "Low",
-                    "value": "S"
-
-                },
-                {
-                    "text": "TEMEROSO",
-                    "type": "Low",
-                    "value": "C"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas más?",
-            "options": [
-                {
-                    "text": "AGRADABLE",
-                    "type": "Motivacional",
-                    "value": "X"
-                },
-                {
-                    "text": "TEMEROSO DE DIOS",
-                    "type": "Motivacional",
-                    "value": "C"
-                },
-                {
-                    "text": "TENAZ",
-                    "type": "Motivacional",
-                    "value": "D"
-                },
-                {
-                    "text": "ATRACTIVO",
-                    "type": "Motivacional",
-                    "value": "I"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas menos?",
-            "options": [
-                {
-                    "text": "AGRADABLE",
-                    "type": "Low",
-                    "value": "S"
-                },
-                {
-                    "text": "TEMEROSO DE DIOS",
-                    "type": "Low",
-                    "value": "C"
-                },
-                {
-                    "text": "TENAZ",
-                    "type": "Low",
-                    "value": "D"
-                },
-                {
-                    "text": "ATRACTIVO",
-                    "type": "Low",
-                    "value": "I"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas más?",
-            "options": [
-                {
-                    "text": "CAUTELOSO",
-                    "type": "Motivacional",
-                    "value": "C"
-                },
-                {
-                    "text": "DETERMINADO",
-                    "type": "Motivacional",
-                    "value": "D"
-                },
-                {
-                    "text": "CONVINCENTE",
-                    "type": "Motivacional",
-                    "value": "I"
-                },
-                {
-                    "text": "BONACHON",
-                    "type": "Motivacional",
-                    "value": "S"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas menos?",
-            "options": [
-                {
-                    "text": "CAUTELOSO",
-                    "type": "Low",
-                    "value": "C"
-                },
-                {
-                    "text": "DETERMINADO",
-                    "type": "Low",
-                    "value": "X"
-                },
-                {
-                    "text": "CONVINCENTE",
-                    "type": "Low",
-                    "value": "I"
-                },
-                {
-                    "text": "BONACHON",
-                    "type": "Low",
-                    "value": "X"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas más?",
-            "options": [
-                {
-                    "text": "DOCIL",
-                    "type": "Motivacional",
-                    "value": "C"
-                },
-                {
-                    "text": "ATREVIDO",
-                    "type": "Motivacional",
-                    "value": "X"
-                },
-                {
-                    "text": "LEAL",
-                    "type": "Motivacional",
-                    "value": "S"
-                },
-                {
-                    "text": "ENCANTADOR",
-                    "type": "Motivacional",
-                    "value": "I"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas menos?",
-            "options": [
-                {
-                    "text": "DOCIL",
-                    "type": "Low",
-                    "value": "C"
-                },
-                {
-                    "text": "ATREVIDO",
-                    "type": "Low",
-                    "value": "D"
-                },
-                {
-                    "text": "LEAL",
-                    "type": "Low",
-                    "value": "X"
-                },
-                {
-                    "text": "ENCANTADOR",
-                    "type": "Low",
-                    "value": "I"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas más?",
-            "options": [
-                {
-                    "text": "DISPUESTO",
-                    "type": "Motivacional",
-                    "value": "S"
-                },
-                {
-                    "text": "DESEOSO",
-                    "type": "Motivacional",
-                    "value": "X"
-                },
-                {
-                    "text": "CONSECUENTE",
-                    "type": "Motivacional",
-                    "value": "C"
-                },
-                {
-                    "text": "ENTUSIASTA",
-                    "type": "Motivacional",
-                    "value": "X"
-                }
-            ]
-        },
-        {
-            "questionText": "¿Con cuál te identificas menos?",
-            "options": [
-                {
-                    "text": "DISPUESTO",
-                    "type": "Low",
-                    "value": "X"
-                },
-                {
-                    "text": "DESEOSO",
-                    "type": "Low",
-                    "value": "X"
-                },
-                {
-                    "text": "CONSECUENTE",
-                    "type": "Low",
-                    "value": "C"
-                },
-                {
-                    "text": "ENTUSIASTA",
-                    "type": "Low",
-                    "value": "D"
-                }
-            ]
+          "text": "ORIGINAL",
+          "type": "Motivacional",
+          "value": "X"
         }
-    ]
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "PERSUASIVO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "GENTIL",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "HUMILDE",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "ORIGINAL",
+          "type": "Low",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "AGRESIVO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "ALMA DE LA FIESTA",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "COMODINO",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "TEMEROSO",
+          "type": "Motivacional",
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "AGRESIVO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "ALMA DE LA FIESTA",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "COMODINO",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "TEMEROSO",
+          "type": "Low",
+          "value": "C"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "AGRADABLE",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "TEMEROSO DE DIOS",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "TENAZ",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "ATRACTIVO",
+          "type": "Motivacional",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "AGRADABLE",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "TEMEROSO DE DIOS",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "TENAZ",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "ATRACTIVO",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "CAUTELOSO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "DETERMINADO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "CONVINCENTE",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "BONACHON",
+          "type": "Motivacional",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "CAUTELOSO",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "DETERMINADO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "CONVINCENTE",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "BONACHON",
+          "type": "Low",
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "DOCIL",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "ATREVIDO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "LEAL",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "ENCANTADOR",
+          "type": "Motivacional",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "DOCIL",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "ATREVIDO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "LEAL",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "ENCANTADOR",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "DISPUESTO",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "DESEOSO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "CONSECUENTE",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "ENTUSIASTA",
+          "type": "Motivacional",
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "DISPUESTO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "DESEOSO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "CONSECUENTE",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "ENTUSIASTA",
+          "type": "Low",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "FZA DE VOLUNTAD",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "MENTE ABIERTA",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "COMPLACIENTE",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "ANIMOSO",
+          "type": "Motivacional",
+          "value": "L"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "FZA DE VOLUNTAD",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "MENTE ABIERTA",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "COMPLACIENTE",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "ANIMOSO",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "CONFIADO",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "SIMPATIZADOR",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "TOLERANTE",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "AFIRMATIVO",
+          "type": "Motivacional",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "CONFIADO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "SIMPATIZADOR",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "TOLERANTE",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "AFIRMATIVO",
+          "type": "Low",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "ECUANINE",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "PRECISO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "NERVIOSO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "JOVIAL",
+          "type": "Motivacional",
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "ECUANINE",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "PRECISO",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "NERVIOSO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "JOVIAL",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "DISCIPLINADO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "GENEROSO",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "ANIMOSO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "PERSISTENTE",
+          "type": "Motivacional",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "DISCIPLINADO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "GENEROSO",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "ANIMOSO",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "PERSISTENTE",
+          "type": "Low",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "COMPETITIVO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "ALEGRE",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "CONSIDERADO",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "ARMONIOSO",
+          "type": "Motivacional",
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "COMPETITIVO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "ALEGRE",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "CONSIDERADO",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "ARMONIOSO",
+          "type": "Low",
+          "value": "C"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "ADMIRABLE",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "BONDADOSO",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "RESIGNADO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "CARACTER FIRME",
+          "type": "Motivacional",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "ADMIRABLE",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "BONDADOSO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "RESIGNADO",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "CARACTER FIRME",
+          "type": "Low",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "OBEDIENTE",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "QUISQUILLOSO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "INCONQUISTABLE",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "JUGUETON",
+          "type": "Motivacional",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "OBEDIENTE",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "QUISQUILLOSO",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "INCONQUISTABLE",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "JUGUETON",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "RESPETUOSO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "EMPRENDEDOR",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "OPTIMISTA",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "SERVICIAL",
+          "type": "Motivacional",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "RESPETUOSO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "EMPRENDEDOR",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "OPTIMISTA",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "SERVICIAL",
+          "type": "Low",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "VALIENTE",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "INSPIRADOR",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "SUMISO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "TÍMIDO",
+          "type": "Motivacional",
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "VALIENTE",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "INSPIRADOR",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "SUMISO",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "TÍMIDO",
+          "type": "Low",
+          "value": "C"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "ADAPTABLE",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "DISPUTADOR",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "INDIFERENTE",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "SANGRE LIVIANA",
+          "type": "Motivacional",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "ADAPTABLE",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "DISPUTADOR",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "INDIFERENTE",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "SANGRE LIVIANA",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "AMIGUERO",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "PACIENTE",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "CONFIANZA EN SI MISMO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "MESURADO PARA HABLAR",
+          "type": "Motivacional",
+          "value": "C"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "AMIGUERO",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "PACIENTE",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "CONFIANZA EN SI MISMO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "MESURADO PARA HABLAR",
+          "type": "Low",
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "CONFORME",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "CONFIABLE",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "PACIFICO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "POSITIVO",
+          "type": "Motivacional",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "CONFORME",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "CONFIABLE",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "PACIFICO",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "POSITIVO",
+          "type": "Low",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "AVENTURERO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "RECEPTIVO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "CORDIAL",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "MODERADO",
+          "type": "Motivacional",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "AVENTURERO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "RECEPTIVO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "CORDIAL",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "MODERADO",
+          "type": "Low",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "INDULGENTE",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "ESTETA",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "VIGOROSO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "SOCIABLE",
+          "type": "Motivacional",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "INDULGENTE",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "ESTETA",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "VIGOROSO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "SOCIABLE",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "PARLANCHIN",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "CONTROLADO",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "CONVENCIONAL",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "DECISIVO",
+          "type": "Motivacional",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "PARLANCHIN",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "CONTROLADO",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "CONVENCIONAL",
+          "type": "Low",
+          "value": "C"
+        },
+        {
+          "text": "DECISIVO",
+          "type": "Low",
+          "value": "D"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "COHIBIDO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "EXACTO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "FRANCO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "BUEN COMPAÑERO",
+          "type": "Motivacional",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "COHIBIDO",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "EXACTO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "FRANCO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "BUEN COMPAÑERO",
+          "type": "Low",
+          "value": "I"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "DIPLOMÁTICO",
+          "type": "Motivacional",
+          "value": "C"
+        },
+        {
+          "text": "AUDAZ",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "REFINADO",
+          "type": "Motivacional",
+          "value": "X"
+        },
+        {
+          "text": "SATISFECHO",
+          "type": "Motivacional",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "DIPLOMÁTICO",
+          "type": "Low",
+          "value": "X"
+        },
+        {
+          "text": "AUDAZ",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "REFINADO",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "SATISFECHO",
+          "type": "Low",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas más?",
+      "options": [
+        {
+          "text": "INQUIETO",
+          "type": "Motivacional",
+          "value": "D"
+        },
+        {
+          "text": "POPULAR",
+          "type": "Motivacional",
+          "value": "I"
+        },
+        {
+          "text": "BUEN VECINO",
+          "type": "Motivacional",
+          "value": "S"
+        },
+        {
+          "text": "DEVOTO",
+          "type": "Motivacional",
+          "value": "C"
+        }
+      ]
+    },
+    {
+      "questionText": "¿Con cuál te identificas menos?",
+      "options": [
+        {
+          "text": "INQUIETO",
+          "type": "Low",
+          "value": "D"
+        },
+        {
+          "text": "POPULAR",
+          "type": "Low",
+          "value": "I"
+        },
+        {
+          "text": "BUEN VECINO",
+          "type": "Low",
+          "value": "S"
+        },
+        {
+          "text": "DEVOTO",
+          "type": "Low",
+          "value": "C"
+        }
+      ]
+    }
+  ]
 }

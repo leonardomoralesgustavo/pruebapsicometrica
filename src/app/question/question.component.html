@@ -74,6 +74,29 @@
     <ng-container *ngIf="isQuizCompleted">
       <dx-chart
         id="chart"
+        [dataSource]="graficaTotales"
+        [stickyHovering]="false"
+        title="Normal"
+      >
+        <dxi-series valueField="value" name="Status" color="green"></dxi-series>
+        <dxo-common-series-settings
+          argumentField="letter"
+          type="spline"
+          hoverMode="includePoints"
+        >
+          <dxo-point hoverMode="allArgumentPoints"></dxo-point>
+        </dxo-common-series-settings>
+        <dxo-legend
+          verticalAlignment="bottom"
+          horizontalAlignment="center"
+          hoverMode="excludePoints"
+        >
+        </dxo-legend>
+        <dxo-export [enabled]="true"></dxo-export>
+      </dx-chart>
+      <br /><br />
+      <dx-chart
+        id="chart"
         [dataSource]="finalMReOrder"
         [stickyHovering]="false"
         title="Motivación"
@@ -102,29 +125,6 @@
         title="Presión"
       >
         <dxi-series valueField="value" name="Status" color="red"></dxi-series>
-        <dxo-common-series-settings
-          argumentField="letter"
-          type="spline"
-          hoverMode="includePoints"
-        >
-          <dxo-point hoverMode="allArgumentPoints"></dxo-point>
-        </dxo-common-series-settings>
-        <dxo-legend
-          verticalAlignment="bottom"
-          horizontalAlignment="center"
-          hoverMode="excludePoints"
-        >
-        </dxo-legend>
-        <dxo-export [enabled]="true"></dxo-export>
-      </dx-chart>
-      <br /><br />
-      <dx-chart
-        id="chart"
-        [dataSource]="graficaTotales"
-        [stickyHovering]="false"
-        title="Normal"
-      >
-        <dxi-series valueField="value" name="Status" color="green"></dxi-series>
         <dxo-common-series-settings
           argumentField="letter"
           type="spline"
