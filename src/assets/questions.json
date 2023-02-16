@@ -199,6 +199,106 @@
                     "value": "X"
                 }
             ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas más?",
+            "options": [
+                {
+                    "text": "DOCIL",
+                    "type": "Motivacional",
+                    "value": "C"
+                },
+                {
+                    "text": "ATREVIDO",
+                    "type": "Motivacional",
+                    "value": "X"
+                },
+                {
+                    "text": "LEAL",
+                    "type": "Motivacional",
+                    "value": "S"
+                },
+                {
+                    "text": "ENCANTADOR",
+                    "type": "Motivacional",
+                    "value": "I"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas menos?",
+            "options": [
+                {
+                    "text": "DOCIL",
+                    "type": "Low",
+                    "value": "C"
+                },
+                {
+                    "text": "ATREVIDO",
+                    "type": "Low",
+                    "value": "D"
+                },
+                {
+                    "text": "LEAL",
+                    "type": "Low",
+                    "value": "X"
+                },
+                {
+                    "text": "ENCANTADOR",
+                    "type": "Low",
+                    "value": "I"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas más?",
+            "options": [
+                {
+                    "text": "DISPUESTO",
+                    "type": "Motivacional",
+                    "value": "S"
+                },
+                {
+                    "text": "DESEOSO",
+                    "type": "Motivacional",
+                    "value": "X"
+                },
+                {
+                    "text": "CONSECUENTE",
+                    "type": "Motivacional",
+                    "value": "C"
+                },
+                {
+                    "text": "ENTUSIASTA",
+                    "type": "Motivacional",
+                    "value": "X"
+                }
+            ]
+        },
+        {
+            "questionText": "¿Con cuál te identificas menos?",
+            "options": [
+                {
+                    "text": "DISPUESTO",
+                    "type": "Low",
+                    "value": "X"
+                },
+                {
+                    "text": "DESEOSO",
+                    "type": "Low",
+                    "value": "X"
+                },
+                {
+                    "text": "CONSECUENTE",
+                    "type": "Low",
+                    "value": "C"
+                },
+                {
+                    "text": "ENTUSIASTA",
+                    "type": "Low",
+                    "value": "D"
+                }
+            ]
         }
     ]
 }
