@@ -1,17 +1,218 @@
-<div class="container bg-light py-4" style="margin-top: 10px;">
+<div class="container">
+  <div class="container bg-light py-4" style="margin-top: 10px">
     <h1 class="display-5 fw-bold">¡Bienvenido!</h1>
-    <!-- <p class="col-md-8 fs-4">This quiz will contains total 9 questions. Each Question holds 10 Points</p> -->
-    <!-- <h4>Rules:</h4> -->
-    <!-- <ol>
-        <li>Correct Question gives you 10 points</li>
-        <li>Incorrect question gives to -10 points</li>
-        <li>You will have 60 sec to answer each question</li>
-        <li>Refereshing the page will reset the Quiz</li>
-    </ol> -->
-    <!-- <h1 style="font-family: cursive;text-align:center">All the best!!</h1> -->
-    <div class="name col-md-4 my-3">
-        <label for="">Escribe tu nombre:</label>
-        <input #name type="text" class="form-control">
+    <br />
+    <!-- <div class="name col-md-4 my-0">
+      <label for="">Escribe tu nombre:</label>
+      <input #name type="text" class="form-control" />
+    </div> -->
+    <!-- form -->
+    <div [hidden]="submitted || confirm">
+      <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        <div class="name col-md-4 my-0">
+          <label for="">Escribe tu nombre:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="model.name"
+            name="name"
+            #name
+          />
+        </div>
+
+        <div class="col-md-4 my-0">
+          <label for="fecha">Fecha</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fecha"
+            required
+            [(ngModel)]="model.fecha"
+            name="fecha"
+            #fecha="ngModel"
+          />
+          <div
+            [hidden]="fecha.valid || fecha.pristine"
+            class="alert alert-danger"
+          >
+            Is required
+          </div>
+        </div>
+
+        <div class="col-md-4 my-0">
+          <label for="escolaridad">Escolaridad</label>
+          <input
+            type="text"
+            class="form-control"
+            id="escolaridad"
+            required
+            [(ngModel)]="model.escolaridad"
+            name="escolaridad"
+            #escolaridad="ngModel"
+          />
+          <div
+            [hidden]="escolaridad.valid || escolaridad.pristine"
+            class="alert alert-danger"
+          >
+            Is required
+          </div>
+        </div>
+
+        <div class="col-md-4 my-0">
+          <label for="ecivil">Estado civil</label>
+          <select
+            class="form-control"
+            id="ecivil"
+            required
+            [(ngModel)]="model.ecivil"
+            name="ecivil"
+            #ecivil="ngModel"
+          >
+            <option *ngFor="let ecivil of estadoCivil" [value]="ecivil">
+              {{ ecivil }}
+            </option>
+          </select>
+          <div
+            [hidden]="ecivil.valid || ecivil.pristine"
+            class="alert alert-danger"
+          >
+            Is required
+          </div>
+        </div>
+
+        <div class="col-md-4 my-0">
+          <label for="sexo">Sexo</label>
+          <select
+            class="form-control"
+            id="sexo"
+            required
+            [(ngModel)]="model.sexo"
+            name="sexo"
+            #sexo="ngModel"
+          >
+            <option *ngFor="let sexo of sexos" [value]="sexo">
+              {{ sexo }}
+            </option>
+          </select>
+          <div
+            [hidden]="sexo.valid || sexo.pristine"
+            class="alert alert-danger"
+          >
+            Gender is required
+          </div>
+        </div>
+
+        <div class="col-md-4 my-0">
+          <label for="puesto">Puesto</label>
+          <input
+            type="text"
+            class="form-control"
+            id="puesto"
+            required
+            [(ngModel)]="model.puesto"
+            name="puesto"
+            #puesto="ngModel"
+          />
+          <div
+            [hidden]="puesto.valid || puesto.pristine"
+            class="alert alert-danger"
+          >
+            Is required
+          </div>
+        </div>
+
+        <div class="col-md-4 my-0">
+          <label for="fnacimiento">Fecha de nacimiento</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fnacimiento"
+            required
+            [(ngModel)]="model.fnacimiento"
+            name="fnacimiento"
+            #fnacimiento="ngModel"
+          />
+          <div
+            [hidden]="fnacimiento.valid || fnacimiento.pristine"
+            class="alert alert-danger"
+          >
+            Is required
+          </div>
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="lname"
+            >Instrucciones <br /><br />
+            Las palabras descriptivas que veras a continuación se encuentran
+            agrupadas en series de cuatro, examina las palabras de cada serie y
+            escoge una con la que “MAS" te identifiques, es la palabra que mejor
+            describe tu forma de ser o de comportarte. Después escoge la palabra
+            con la menos describa o se acerque a tu forma de ser, bajo la
+            columna de "MENOS".</label
+          >
+        </div>
+
+        <br />
+
+        <button
+          type="submit"
+          class="btn btn-primary btn-lg"
+          (click)="startQuiz()"
+          [disabled]="!signupForm.form.valid"
+        >
+          Enviar
+        </button>
+      </form>
     </div>
-    <button class="btn btn-primary btn-lg" routerLink="/question" (click)="startQuiz()">Iniciar prueba</button>
+
+    <div [hidden]="!submitted">
+      <h2>¡Te has registrado!</h2>
+      <br />
+      <!-- <div class="row">
+        <div class="col-xs-3">Nombre</div>
+        <div class="col-xs-9 pull-left">{{ name }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Fecha de registro</div>
+        <div class="col-xs-9 pull-left">{{ model.fecha }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Escolaridad</div>
+        <div class="col-xs-9 pull-left">{{ model.escolaridad }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Estadi Civil</div>
+        <div class="col-xs-9 pull-left">{{ model.ecivil }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Sexo</div>
+        <div class="col-xs-9 pull-left">{{ model.sexo }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Puesto</div>
+        <div class="col-xs-9 pull-left">{{ model.puesto }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Fecha de nacimiento</div>
+        <div class="col-xs-9 pull-left">{{ model.fnacimiento }}</div>
+      </div> -->
+      <!-- <br />
+      <button class="btn btn-primary" (click)="submitted = false">Edit</button>
+      <button class="btn btn-primary" (click)="confirmSubmit()">Confirm</button> -->
+      <button
+        class="btn btn-primary btn-lg"
+        routerLink="/question"
+        (click)="startQuiz()"
+      >
+        Iniciar prueba
+      </button>
+    </div>
+    <div [hidden]="!confirm">
+      <h2>Thank you: {{ name }}</h2>
+    </div>
+    <br />
+  </div>
 </div>
