@@ -32,6 +32,7 @@ export class QuestionComponent implements OnInit {
   public elementClicked: any = '';
   correctAnswer: number = 0;
   isQuizCompleted: boolean = false;
+  flagButtonBack: boolean = false;
   selectedValue = '';
   disabledButtons: any = [];
 
@@ -134,7 +135,7 @@ export class QuestionComponent implements OnInit {
 
     let lastElement = this.resultados[this.resultados.length - 1];
 
-    // console.log(lastElement);
+    console.log(lastElement);
 
     let index: any;
     for (
@@ -153,9 +154,11 @@ export class QuestionComponent implements OnInit {
 
     // console.log(index);
     this.auxValue = index;
-    console.log(
-      'Value: ' + this.questionList[this.currentPosition].options[index].value
-    );
+    // console.log(
+    //   'Value: ' + this.questionList[this.currentPosition].options[index].value
+    // );
+
+    console.log('Current Position:', this.currentPosition);
 
     if (
       this.questionList[this.currentPosition].options[index].type ==
@@ -170,12 +173,13 @@ export class QuestionComponent implements OnInit {
       );
     }
 
-    // console.log(this.valuesM);
+    console.log('Resultados M en Next: ', this.valuesM);
     while (this.valuesM.indexOf('X') !== -1) {
       this.valuesM.splice(this.valuesM.indexOf('X'), 1);
     }
     // console.log('Elimnando la X en Motivacional: ', this.valuesM);
-    console.log(this.valuesL);
+    // console.log(this.valuesL);
+    console.log('Resultados L en Next: ', this.valuesL);
     while (this.valuesL.indexOf('X') !== -1) {
       this.valuesL.splice(this.valuesL.indexOf('X'), 1);
     }
@@ -186,7 +190,7 @@ export class QuestionComponent implements OnInit {
 
     this.selectedValue = '';
     this.currentQuestion++;
-    // console.log(this.currentQuestion);
+    console.log('Current question: in Next', this.currentQuestion);
     this.currentPosition++;
 
     if (this.currentPosition % 2 == 0) {
@@ -423,7 +427,22 @@ export class QuestionComponent implements OnInit {
   }
 
   previousQuestion() {
+    this.flagButtonBack = true;
     this.currentQuestion--;
+    this.currentPosition--;
+    this.disabledButtons = [];
+    console.log(this.temp);
+
+    if (this.currentPosition % 2 == 0) {
+      this.valuesM.pop();
+    } else {
+      this.valuesL.pop();
+    }
+
+    console.log('Current position in Previous: ', this.currentQuestion);
+
+    console.log('Array de resultado back M: ', this.valuesM);
+    console.log('Array de resultado back L: ', this.valuesL);
   }
 
   answer(currentQno: number, option: any) {
