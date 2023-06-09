@@ -19,7 +19,7 @@ export class WelcomeComponent implements OnInit {
     localStorage.setItem('name', this.nameKey.nativeElement.value);
   }
 
-  sexos = ['Femenino', 'Maculino'];
+  sexos = ['Femenino', 'Masculino'];
   estadoCivil = ['Soltero', 'Casado', 'Divorciado', 'Viudo', 'Unión libre'];
   model = new SignupModel();
   submitted = false;
